@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: video-downloader-deployment
+  labels:
+    app: video-downloader
+spec:
+
+  replicas: 2
+  selector:
+    matchLabels:
+      app: video-downloader
+  template:
+    metadata:
+      labels:
+        app: video-downloader
+    spec:
+      containers:
+        - name: video-downloader
+
+          image: ovie2604/video-downloader:1.0.1
+          ports:
+          - containerPort: 3000
+
+          imagePullPolicy: IfNotPresent

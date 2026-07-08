@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const API_KEY = process.env.SERPAPI_API_KEY;
 // const DOWNLOAD_DIR = path.join(__dirname__, "downloads");
-const DOWNLOAD_DIR = path.join(__dirname__, "downloads");
+const DOWNLOAD_DIR = path.join(__dirname, "downloads");
 
 if (!fs.existsSync(DOWNLOAD_DIR)) {
     fs.mkdirSync(DOWNLOAD_DIR);
