@@ -1,0 +1,20 @@
+name: My first GitHub Action
+
+on: 
+  push: 
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project code
+        uses: actions/checkout@v4
+
+      - name: Print a greeting message
+        run: echo "Hello, GitHub Actions is working!"
+
+      - name: Run a sample test script
+        run: echo "Simulating automated tests..."
