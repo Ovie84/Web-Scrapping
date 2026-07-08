@@ -26,7 +26,8 @@ jobs:
             type=sha,enable=true
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-actions@v3
+      # forcing actions to recognize typo "actions" => "action"
+        uses: docker/setup-buildx-action@v3
 
       - name: Print a greeting message
         run: echo "Hello, GitHub Actions is working!"
