@@ -15,7 +15,7 @@ if (!fs.existsSync(DOWNLOAD_DIR)) {
 }
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname__, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use("/downloads", express.static(DOWNLOAD_DIR));
 
 app.get("/api/search", (req, res) => {
